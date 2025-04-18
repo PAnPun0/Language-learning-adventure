@@ -21,11 +21,13 @@ public class DialogueManager : MonoBehaviour
     public Transform playerCamera;
     public PlayerMovement playerMovement;
     public CameraController cameraController;
+    
 
     private int currentDialogueIndex = 0;
     private List<int> mistakes = new List<int>();
     private Vector3 originalCameraPosition;
     private Quaternion originalCameraRotation;
+    
 
     void Start()
     {
@@ -57,11 +59,18 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        Debug.Log("Starting Dialogue!");
+        
+
+        
+
+        
         if (dialogues == null || dialogues.Count == 0)
         {
             Debug.LogWarning("Нельзя начать диалог: нет загруженных диалогов.");
             return;
         }
+
 
         originalCameraPosition = playerCamera.position;
         originalCameraRotation = playerCamera.rotation;
@@ -73,6 +82,9 @@ public class DialogueManager : MonoBehaviour
         Cursor.visible = true;
         StartCoroutine(MoveCameraToDialoguePoint());
     }
+    
+
+
 
     IEnumerator MoveCameraToDialoguePoint()
     {
@@ -155,6 +167,7 @@ public class DialogueManager : MonoBehaviour
     void NextDialogue()
     {
         resultPanel.SetActive(false);
+        
 
         if (++currentDialogueIndex < dialogues.Count)
         {
@@ -191,6 +204,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        
         StartCoroutine(RestoreCameraAndEnableMovement());
     }
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Dialogue
 {
     public string Question;
+    
     public List<DialogueOption> Options;
     public AudioClip voiceClip; // <--- Добавляем сюда
 }
