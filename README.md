@@ -1,2 +1,2 @@
 # Language-learning-adventure
-LLA REMASTERD on unity 6
+LLA REMASTEReD on unity 6
