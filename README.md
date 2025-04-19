@@ -25,7 +25,11 @@
 - `Scenes/Cafe.unity`, `Scenes/Street.unity` или `Scenes/Airport.unity` для игровых уровней.
 5. Нажмите **Play** и начните обучение через приключение!
 
-- Unity 2023 (URP / Standard)
+---
+
+## Технологии
+
+- Unity 2024 (URP / Standard)
 - C# (Scriptable Object, JSON, сцены, UI)
 - Простая интеграция TTS (Text-to-Speech) системы *(планируется)*
 - Поддержка пользовательских уровней через Конструктор
